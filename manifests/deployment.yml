@@ -1,0 +1,24 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: applicationnetcore 
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: applicationnetcore
+  template:
+    metadata:
+      labels:
+        app: applicationnetcore 
+    spec:
+      containers:
+        - name: applicationnetcore 
+          image: #{containerRegistry}#/#{imageRepository}#:#{tag}#
+          ports:
+          - containerPort: 80
+          resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 500m 
