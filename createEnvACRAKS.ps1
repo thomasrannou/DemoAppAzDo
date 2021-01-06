@@ -1,7 +1,7 @@
 #Connexion à la souscription Azure
 az login
 az account list
-az account set --subscription "b0863488-158d-4230-8349-af178b11e8e0"
+az account set --subscription "id-souscription"
 
 # general
 $location = "francecentral"
